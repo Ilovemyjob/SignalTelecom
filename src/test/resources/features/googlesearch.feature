@@ -5,3 +5,4 @@ Feature: Google Search
 
   Scenario: TC01_user search signal telecom in google
     And User writes signal-telecom on google search box
+    And google popup click

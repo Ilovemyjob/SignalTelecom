@@ -15,8 +15,17 @@ public class GoogleSearchStepDefinition {
     }
 
     @Given("User writes signal-telecom on google search box")
-    public void user_writes_signal_telecom_on_google_search_box() {
-        googlePage.searchbox.sendKeys("signal-telecom"+ Keys.ENTER);
+    public void user_writes_signal_telecom_on_google_search_box() throws InterruptedException {
+        googlePage.searchbox.sendKeys("signal-telecom" + Keys.ENTER);
+        Thread.sleep(3000);
+    }
+
+        @Given("google popup click")
+        public void google_popup_click() {
+         googlePage.googlepopup.click();
+
+
+
     }
 
 }
